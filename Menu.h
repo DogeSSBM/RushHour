@@ -20,13 +20,13 @@ bool menuSelect(Ticks frameEnd, char *levelStr)
 				break;
 			case SDLK_UP:
 				sprintf(levelStr,"%02u",
-					clamp((strToInt(levelStr)+1),0,100)
+					clamp((strToInt(levelStr)+1),1,41)
 				);
 				printf("levelStr: %s\n",levelStr);
 				break;
 			case SDLK_DOWN:
 				sprintf(levelStr,"%02u",
-					clamp((strToInt(levelStr)-1),0,100)
+					clamp((strToInt(levelStr)-1),1,41)
 				);
 				printf("levelStr: %s\n",levelStr);
 				break;

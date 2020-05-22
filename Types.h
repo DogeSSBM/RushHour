@@ -3,6 +3,7 @@ typedef FILE			File;
 typedef time_t			Time;
 typedef unsigned int		Ticks;
 
+typedef long int			lint;
 typedef unsigned char		uchar;
 typedef unsigned int		uint;
 typedef unsigned long		ul;

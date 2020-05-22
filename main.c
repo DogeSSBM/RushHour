@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 {
 	init(WINLEN, WINLEN);
 	Ticks frameStart;
-	char levelStr[] = "00";
+	char levelStr[] = "01";
 	printf("Entering menu\n");
 	do{
 		frameStart = getTicks();

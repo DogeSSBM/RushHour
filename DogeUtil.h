@@ -1,5 +1,14 @@
 #pragma once
 
+lint flen(File *f)
+{
+	const lint currentPos = ftell(f);
+	fseek(f, 0, SEEK_END);
+	const lint ret = ftell(f);
+	fseek(f, currentPos, SEEK_SET);
+	return ret;
+}
+
 void clearTerminal(void)
 {
 	printf("\e[1;1H\e[2J");

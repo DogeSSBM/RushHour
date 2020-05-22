@@ -103,6 +103,12 @@ bool inBound(const int n, const int min, const int max)
 	return n >= min && n < max;
 }
 
+Coord coordClamp(const Coord coord, const int min, const int max)
+{
+	const Coord ret = {clamp(coord.x, min, max), clamp(coord.y, min, max)};
+	return ret;
+}
+
 Coord coordShift(const Coord coord, const Direction dir, const int units)
 {
 	Coord ret = coord;

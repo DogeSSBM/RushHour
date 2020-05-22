@@ -20,7 +20,6 @@
 #include "Colors.h"
 #include "Graphics.h"
 #include "Timing.h"
-#include "Events.h"
 #include "Text.h"
 #include "Image.h"
 #include "DogeUtil.h"
@@ -28,3 +27,5 @@
 #include "Cars.h"
 #include "Grid.h"
 #include "Menu.h"
+#include "Draw.h"
+#include "Events.h"

@@ -94,6 +94,7 @@ clamp	Types.h	/^int clamp(const int n, const int min, const int max)$/;"	f
 clear	Graphics.h	/^void clear()$/;"	f
 clearTerminal	DogeUtil.h	/^void clearTerminal(void)$/;"	f
 color	Cars.h	/^	Color color;$/;"	m	struct:__anon2
+coordClamp	Types.h	/^Coord coordClamp(const Coord coord, const int min, const int max)$/;"	f
 coordShift	Types.h	/^Coord coordShift(const Coord coord, const Direction dir, const int units)$/;"	f
 defaultColor	Graphics.h	/^	Color defaultColor;$/;"	m	struct:__anon7
 dirINV	Types.h	86;"	d
@@ -104,8 +105,13 @@ dirROL	Types.h	82;"	d
 dirROR	Types.h	81;"	d
 dirUD	Types.h	88;"	d
 draw	Graphics.h	/^void draw()$/;"	f
+drawCarOutline	Draw.h	/^void drawCarOutline(const char letter)$/;"	f
+drawCarSquare	Draw.h	/^void drawCarSquare(const uint x, const uint y, const char letter)$/;"	f
+drawCarSquareOutline	Draw.h	/^void drawCarSquareOutline(const uint x, const uint y)$/;"	f
+drawCars	Draw.h	/^void drawCars(void)$/;"	f
 drawCircle	Graphics.h	/^void drawCircle(uint x, uint y, uint radius)$/;"	f
 drawCircleCoord	Graphics.h	/^void drawCircleCoord(const Coord pos, const uint radius)$/;"	f
+drawGrid	Draw.h	/^void drawGrid(void)$/;"	f
 drawHLine	Graphics.h	/^void drawHLine(uint x, uint y, int len)$/;"	f
 drawImg	Image.h	/^void drawImg(Img *image)$/;"	f
 drawLine	Graphics.h	/^void drawLine(uint x1, uint y1, uint x2, uint y2)$/;"	f
@@ -116,13 +122,14 @@ drawSquare	Graphics.h	/^void drawSquare(uint x, uint y, uint len)$/;"	f
 drawText	Text.h	/^void drawText(uint x, uint y, const char *text)$/;"	f
 drawTextCentered	Text.h	/^void drawTextCentered(uint x, uint y, const char *text)$/;"	f
 drawVLine	Graphics.h	/^void drawVLine(uint x, uint y, int len)$/;"	f
-events	Events.h	/^void events(Ticks frameEnd)$/;"	f
+events	Events.h	/^void events(Ticks frameEnd, char *selected)$/;"	f
 fillBorder	Graphics.h	/^void fillBorder(uint x, uint y, uint xlen, uint ylen, int b)$/;"	f
 fillCircle	Graphics.h	/^void fillCircle(uint x, uint y, uint radius)$/;"	f
 fillCircleCoord	Graphics.h	/^void fillCircleCoord(const Coord pos, const uint radius)$/;"	f
 fillRect	Graphics.h	/^void fillRect(uint x, uint y, uint xlen, uint ylen)$/;"	f
 fillScreen	Graphics.h	/^void fillScreen()$/;"	f
 fillSquare	Graphics.h	/^void fillSquare(uint x, uint y, uint len)$/;"	f
+fillSquareCoord	Graphics.h	/^void fillSquareCoord(const Coord pos, const uint len)$/;"	f
 flen	DogeUtil.h	/^lint flen(File *f)$/;"	f
 font	Graphics.h	/^	TTF_Font* font;$/;"	m	struct:__anon7
 fontColor	Graphics.h	/^	Color fontColor;$/;"	m	struct:__anon7
@@ -136,6 +143,7 @@ gfx	Graphics.h	/^}gfx = {};$/;"	v	typeref:struct:__anon7
 gfx_init	Graphics.h	/^void gfx_init(uint winXlen, uint winYlen)$/;"	f
 gfx_quit	Graphics.h	/^void gfx_quit(void)$/;"	f
 grid	Grid.h	/^char grid[GRIDLEN][GRIDLEN];$/;"	v
+gridCoordToScreen	Grid.h	/^Coord gridCoordToScreen(const Coord gpos)$/;"	f
 gridToScreen	Grid.h	/^uint gridToScreen(const uint pos)$/;"	f
 i16	Types.h	/^typedef int16_t			i16;$/;"	t
 i32	Types.h	/^typedef int32_t			i32;$/;"	t
@@ -157,7 +165,7 @@ loadGrid	Grid.h	/^void loadGrid(const char *levelStr)$/;"	f
 loadImg	Image.h	/^Img* loadImg(const char *imgFile)$/;"	f
 main	main.c	/^int main(int argc, char const *argv[])$/;"	f
 menuSelect	Menu.h	/^bool menuSelect(Ticks frameEnd, char *levelStr)$/;"	f
-moveCarGrid	Grid.h	/^void moveCarGrid(Car *car, const Direction dir)$/;"	f
+moveCarGrid	Grid.h	/^void moveCarGrid()$/;"	f
 parseLevelFile	Grid.h	/^bool parseLevelFile(File *f)$/;"	f
 printCoord	Types.h	/^void printCoord(const Coord pos)$/;"	f
 printGrid	Grid.h	/^void printGrid(void)$/;"	f
@@ -179,6 +187,7 @@ setRGB	Graphics.h	/^void setRGB(u8 r, u8 g, u8 b)$/;"	f
 setRGBA	Graphics.h	/^void setRGBA(u8 r, u8 g, u8 b, u8 a)$/;"	f
 setWindowMode	Graphics.h	/^void setWindowMode(const WindowMode mode)$/;"	f
 setWindowSize	Graphics.h	/^void setWindowSize(uint x, uint y)$/;"	f
+shiftCar	Events.h	/^void shiftCar(const char letter, const Direction dir)$/;"	f
 shiftL	GetInt.h	/^int shiftL(int num, int digits)$/;"	f
 shiftR	GetInt.h	/^int shiftR(const int num)$/;"	f
 size	Text.h	/^	int size;$/;"	m	struct:__anon8

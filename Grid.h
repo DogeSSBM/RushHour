@@ -1,5 +1,4 @@
 #pragma once
-
 char grid[GRIDLEN][GRIDLEN];
 
 void printGrid(void)
@@ -78,7 +77,13 @@ uint screenToGrid(const uint pos)
 	//return pos/SCALE + (pos%SCALE > HSCALE);
 }
 
-void moveCarGrid(Car *car, const Direction dir)
+Coord gridCoordToScreen(const Coord gpos)
+{
+	const Coord spos = {gridToScreen(gpos.x), gridToScreen(gpos.y)};
+	return spos;
+}
+
+void moveCarGrid()
 {
 
 }

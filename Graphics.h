@@ -74,6 +74,12 @@ void fillSquare(uint x, uint y, uint len)
 	SDL_RenderFillRect(gfx.renderer, &r);
 }
 
+void fillSquareCoord(const Coord pos, const uint len)
+{
+	Rect r = {pos.x, pos.y, len, len};
+	SDL_RenderFillRect(gfx.renderer, &r);
+}
+
 void fillBorder(uint x, uint y, uint xlen, uint ylen, int b)
 {
 	fillRect(x-b, y-b, xlen+2*b, b);

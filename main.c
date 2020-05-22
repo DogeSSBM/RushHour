@@ -24,11 +24,16 @@ int main(int argc, char const *argv[])
 	printf("Loading grid\n");
 	loadGrid(levelStr);
 	printf("Starting main loop\n");
+	char selected = 'X';
 	while(1){
 		frameStart = getTicks();
 		clear();
+		drawGrid();
+		if(selected != '-')
+			drawCarOutline(selected);
+		drawCars();
 		draw();
-		events(frameStart + TPS);
+		events(frameStart + TPS, &selected);
 	}
 	return 0;
 }

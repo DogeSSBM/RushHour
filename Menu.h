@@ -41,3 +41,19 @@ bool menuSelect(Ticks frameEnd, char *levelStr)
 	}
 	return false;
 }
+
+void menu(void)
+{
+	setFontSize(SCALE);
+	Ticks frameStart;
+	static char levelStr[] = "01";
+	printf("Entering menu\n");
+	do{
+		frameStart = getTicks();
+		clear();
+		drawTextCentered(HWINLEN,HWINLEN,levelStr);
+		draw();
+	}while(!menuSelect(frameStart + TPS, levelStr));
+	printf("Loading grid\n");
+	loadGrid(levelStr);
+}

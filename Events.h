@@ -1,7 +1,7 @@
 #pragma once
-#define TPS		33
 
-void shiftCar(const char letter, const Direction dir)
+// returns true on win condition
+bool shiftCar(const char letter, const Direction dir)
 {
 	Coord pos = {0, 0};
 	uint len;
@@ -18,10 +18,12 @@ void shiftCar(const char letter, const Direction dir)
 	ESCAPE:
 	if(dirUD(dir)){
 		if(grid[pos.x][pos.y+1] != letter)
-			return;
+			return false;
 	}else{
+		if(letter == 'X' && pos.x == 4 && pos.y == 2)
+			return true;
 		if(grid[pos.x+1][pos.y] != letter)
-			return;
+			return false;
 	}
 	for(uint i = 0; i < NUMCAR; i++){
 		if(carArr[i].letter == letter){
@@ -36,6 +38,7 @@ void shiftCar(const char letter, const Direction dir)
 		grid[check.x][check.y] = letter;
 		grid[pos.x][pos.y] = '-';
 	}
+	return false;
 }
 
 void events(Ticks frameEnd, char *selected)
@@ -66,15 +69,16 @@ void events(Ticks frameEnd, char *selected)
 			case SDLK_RIGHT:
 				if(*selected == '-')
 					break;
-				shiftCar(*selected, DIR_R);
+				if(shiftCar(*selected, DIR_R))
+					*selected = '!';	// win condition
 				break;
-			case SDLK_a:
+			case SDLK_s:
 			case SDLK_DOWN:
 				if(*selected == '-')
 					break;
 				shiftCar(*selected, DIR_D);
 				break;
-			case SDLK_s:
+			case SDLK_a:
 			case SDLK_LEFT:
 				if(*selected == '-')
 					break;

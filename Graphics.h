@@ -10,76 +10,90 @@ struct{
 	Color defaultColor;
 }gfx = {};
 
+static inline
 void setWindowMode(const WindowMode mode)
 {
 	SDL_SetWindowFullscreen(gfx.window, mode);
 }
 
-void setWindowSize(uint x, uint y)
+static inline
+void setWindowSize(const uint x, const uint y)
 {
 	SDL_SetWindowSize(gfx.window, x, y);
 }
 
-void setBlend(BlendMode mode)
+static inline
+void setBlend(const BlendMode mode)
 {
 	SDL_SetRenderDrawBlendMode(gfx.renderer, mode);
 }
 
-void drawPixel(uint x, uint y)
+static inline
+void drawPixel(const uint x, const uint y)
 {
 	SDL_RenderDrawPoint(gfx.renderer, x, y);
 }
 
+static inline
 void drawLine(uint x1, uint y1, uint x2, uint y2)
 {
 	SDL_RenderDrawLine(gfx.renderer, x1, y1, x2, y2);
 }
 
+static inline
 void drawLineCoords(const Coord pos1, const Coord pos2)
 {
 	SDL_RenderDrawLine(gfx.renderer, pos1.x, pos1.y, pos2.x, pos2.y);
 }
 
+static inline
 void drawHLine(uint x, uint y, int len)
 {
 	SDL_RenderDrawLine(gfx.renderer, x, y, x+len, y);
 }
 
+static inline
 void drawVLine(uint x, uint y, int len)
 {
 	SDL_RenderDrawLine(gfx.renderer, x, y, x, y+len);
 }
 
+static inline
 void drawRect(uint x, uint y, uint xlen, uint ylen)
 {
 	Rect r = {x, y, xlen, ylen};
 	SDL_RenderDrawRect(gfx.renderer, &r);
 }
 
+static inline
 void fillRect(uint x, uint y, uint xlen, uint ylen)
 {
 	Rect r = {x, y, xlen, ylen};
 	SDL_RenderFillRect(gfx.renderer, &r);
 }
 
+static inline
 void drawSquare(uint x, uint y, uint len)
 {
 	Rect r = {x, y, len, len};
 	SDL_RenderDrawRect(gfx.renderer, &r);
 }
 
+static inline
 void fillSquare(uint x, uint y, uint len)
 {
 	Rect r = {x, y, len, len};
 	SDL_RenderFillRect(gfx.renderer, &r);
 }
 
+static inline
 void fillSquareCoord(const Coord pos, const uint len)
 {
 	Rect r = {pos.x, pos.y, len, len};
 	SDL_RenderFillRect(gfx.renderer, &r);
 }
 
+static inline
 void fillBorder(uint x, uint y, uint xlen, uint ylen, int b)
 {
 	fillRect(x-b, y-b, xlen+2*b, b);
@@ -88,6 +102,7 @@ void fillBorder(uint x, uint y, uint xlen, uint ylen, int b)
 	fillRect(x+xlen, y, b, ylen);
 }
 
+static inline
 void drawCircle(uint x, uint y, uint radius)
 {
 	uint rsq = radius*radius;
@@ -109,6 +124,7 @@ void drawCircle(uint x, uint y, uint radius)
 	}
 }
 
+static inline
 void fillCircle(uint x, uint y, uint radius)
 {
 	uint rsq = radius*radius;
@@ -125,6 +141,7 @@ void fillCircle(uint x, uint y, uint radius)
 	}
 }
 
+static inline
 void drawCircleCoord(const Coord pos, const uint radius)
 {
 	uint rsq = radius*radius;
@@ -146,6 +163,7 @@ void drawCircleCoord(const Coord pos, const uint radius)
 	}
 }
 
+static inline
 void fillCircleCoord(const Coord pos, const uint radius)
 {
 	uint rsq = radius*radius;
@@ -162,6 +180,7 @@ void fillCircleCoord(const Coord pos, const uint radius)
 	}
 }
 
+static inline
 Color getColor(void)
 {
 	Color c = {0};
@@ -169,26 +188,31 @@ Color getColor(void)
 	return c;
 }
 
-void setColor(Color c)
+static inline
+void setColor(const Color c)
 {
 	SDL_SetRenderDrawColor(gfx.renderer, c.r, c.g, c.b, c.a);
 }
 
+static inline
 void setRGB(u8 r, u8 g, u8 b)
 {
 	SDL_SetRenderDrawColor(gfx.renderer, r, g, b, 255);
 }
 
+static inline
 void setRGBA(u8 r, u8 g, u8 b, u8 a)
 {
 	SDL_SetRenderDrawColor(gfx.renderer, r, g, b, a);
 }
 
+static inline
 void fillScreen()
 {
 	fillRect(0,0,gfx.xlen,gfx.ylen);
 }
 
+static inline
 void clear()
 {
 	Color c = getColor();
@@ -198,11 +222,13 @@ void clear()
 	setColor(c);
 }
 
+static inline
 void draw()
 {
 	SDL_RenderPresent(gfx.renderer);
 }
 
+static inline
 void saveScreenshot(const char* file_name)
 {
 	SDL_Surface *sshot = SDL_CreateRGBSurface(0, gfx.xlen, gfx.ylen, 32,
@@ -213,6 +239,7 @@ void saveScreenshot(const char* file_name)
 	//SDL_FreeSurface(sshot);
 }
 
+static inline
 void gfx_quit(void)
 {
 	// Destroy renderer
@@ -223,6 +250,7 @@ void gfx_quit(void)
 	SDL_Quit();
 }
 
+static inline
 void gfx_init(uint winXlen, uint winYlen)
 {
 	if(SDL_Init(SDL_INIT_VIDEO)<0){

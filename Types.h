@@ -61,14 +61,10 @@ typedef union{
 	};
 }Coord;
 
+static inline
 bool sameCoord(const Coord pos1, const Coord pos2)
 {
 	return pos1.x == pos2.x && pos1.y == pos2.y;
-}
-
-void printCoord(const Coord pos)
-{
-	printf("(%2d,%2d)", pos.x, pos.y);
 }
 
 typedef enum{
@@ -89,6 +85,7 @@ typedef enum{
 #define dirPOS(d)			((d)==DIR_R||(d)==DIR_D)
 #define dirNEG(d)			((d)==DIR_L||(d)==DIR_U)
 
+static inline
 int clamp(const int n, const int min, const int max)
 {
 	if(n < min)
@@ -98,17 +95,20 @@ int clamp(const int n, const int min, const int max)
 	return n;
 }
 
+static inline
 bool inBound(const int n, const int min, const int max)
 {
 	return n >= min && n < max;
 }
 
+static inline
 Coord coordClamp(const Coord coord, const int min, const int max)
 {
 	const Coord ret = {clamp(coord.x, min, max), clamp(coord.y, min, max)};
 	return ret;
 }
 
+static inline
 Coord coordShift(const Coord coord, const Direction dir, const int units)
 {
 	Coord ret = coord;

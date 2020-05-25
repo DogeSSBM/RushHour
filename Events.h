@@ -43,6 +43,29 @@ void shiftCar(char *selected, const Direction dir)
 	return;
 }
 
+char cycleCar(const char selected, bool prev)
+{
+	for(int i = 0; i < NUMCAR; i++){
+		if(carArr[i].letter == selected){
+			if(prev){
+				printf("Prev\n");
+				do{
+					i=i>0?i-1:NUMCAR-1;
+				}while(!carArr[i].enabled);
+				return carArr[i].letter;
+			}else{
+				printf("Next\n");
+				do{
+
+					i=(i+1)%NUMCAR;
+				}while(!carArr[i].enabled);
+				return carArr[i].letter;
+			}
+		}
+	}
+	return selected;
+}
+
 void events(Ticks frameEnd, char *selected)
 {
 	i32 ticksLeft = frameEnd - getTicks();
@@ -59,6 +82,9 @@ void events(Ticks frameEnd, char *selected)
 			break;
 		case SDL_KEYDOWN:
 			switch (event.key.keysym.sym) {
+			case SDLK_TAB:
+				*selected = cycleCar(*selected, SDL_GetModState()&KMOD_LSHIFT);
+				break;
 			case SDLK_ESCAPE:
 				*selected = '~';
 				return;

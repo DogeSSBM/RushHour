@@ -102,6 +102,14 @@ bool inBound(const int n, const int min, const int max)
 }
 
 static inline
+int wrap(const int n, const int min, const int max)
+{
+	if(n < min)
+		return max - ABS(n-min);
+	return n % max;
+}
+
+static inline
 Coord coordClamp(const Coord coord, const int min, const int max)
 {
 	const Coord ret = {clamp(coord.x, min, max), clamp(coord.y, min, max)};

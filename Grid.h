@@ -41,11 +41,25 @@ bool parseLevelFile(File *f)
 		if(c != '\n' && y != 5)
 			return false;
 	}
+	for(uint i = 0; i < NUMCAR; i++){
+		for(uint y = 0; y < 6; y++){
+			for(uint x = 0; x < 6; x++){
+				if(carArr[i].letter == grid[x][y]){
+					carArr[i].enabled = true;
+					y = 6;
+					break;
+				}
+			}
+		}
+	}
 	return true;
 }
 
 void loadGrid(const char *levelStr)
 {
+	for(uint i = 0; i < NUMCAR; i++){
+		carArr[i].enabled = false;
+	}
 	if(strlen(levelStr) > 2){
 		printf("strlen(LevelStr) incorrect len.\n");
 		printf("LevelStr: %s\n", levelStr);
@@ -81,9 +95,4 @@ Coord gridCoordToScreen(const Coord gpos)
 {
 	const Coord spos = {gridToScreen(gpos.x), gridToScreen(gpos.y)};
 	return spos;
-}
-
-void moveCarGrid()
-{
-
 }

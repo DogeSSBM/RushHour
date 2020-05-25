@@ -96,6 +96,7 @@ clearTerminal	DogeUtil.h	/^void clearTerminal(void)$/;"	f
 color	Cars.h	/^	Color color;$/;"	m	struct:__anon2
 coordClamp	Types.h	/^Coord coordClamp(const Coord coord, const int min, const int max)$/;"	f
 coordShift	Types.h	/^Coord coordShift(const Coord coord, const Direction dir, const int units)$/;"	f
+cycleCar	Events.h	/^char cycleCar(const char selected, bool prev)$/;"	f
 defaultColor	Graphics.h	/^	Color defaultColor;$/;"	m	struct:__anon7
 dirINV	Types.h	82;"	d
 dirLR	Types.h	83;"	d
@@ -122,6 +123,7 @@ drawSquare	Graphics.h	/^void drawSquare(uint x, uint y, uint len)$/;"	f
 drawText	Text.h	/^void drawText(uint x, uint y, const char *text)$/;"	f
 drawTextCentered	Text.h	/^void drawTextCentered(uint x, uint y, const char *text)$/;"	f
 drawVLine	Graphics.h	/^void drawVLine(uint x, uint y, int len)$/;"	f
+enabled	Cars.h	/^	bool enabled;$/;"	m	struct:__anon2
 events	Events.h	/^void events(Ticks frameEnd, char *selected)$/;"	f
 fillBorder	Graphics.h	/^void fillBorder(uint x, uint y, uint xlen, uint ylen, int b)$/;"	f
 fillCircle	Graphics.h	/^void fillCircle(uint x, uint y, uint radius)$/;"	f
@@ -166,7 +168,6 @@ loadImg	Image.h	/^Img* loadImg(const char *imgFile)$/;"	f
 main	main.c	/^int main(int argc, char const *argv[])$/;"	f
 menu	Menu.h	/^void menu(const bool increment)$/;"	f
 menuSelect	Menu.h	/^bool menuSelect(Ticks frameEnd, char *levelStr)$/;"	f
-moveCarGrid	Grid.h	/^void moveCarGrid()$/;"	f
 parseLevelFile	Grid.h	/^bool parseLevelFile(File *f)$/;"	f
 printGrid	Grid.h	/^void printGrid(void)$/;"	f
 r	Text.h	/^	Rect r;$/;"	m	struct:__anon8
@@ -204,6 +205,7 @@ uint	Types.h	/^typedef unsigned int		uint;$/;"	t
 ul	Types.h	/^typedef unsigned long		ul;$/;"	t
 ull	Types.h	/^typedef unsigned long long	ull;$/;"	t
 window	Graphics.h	/^	SDL_Window* window;$/;"	m	struct:__anon7
+wrap	Types.h	/^int wrap(const int n, const int min, const int max)$/;"	f
 x	Types.h	/^		int x;$/;"	m	struct:__anon4::__anon5
 xlen	Graphics.h	/^	uint xlen, ylen;$/;"	m	struct:__anon7
 y	Types.h	/^		int y;$/;"	m	struct:__anon4::__anon5

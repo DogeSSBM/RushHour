@@ -1,14 +1,13 @@
 #pragma once
 
-// returns true on win condition
-bool shiftCar(const char letter, const Direction dir)
+void shiftCar(char *selected, const Direction dir)
 {
 	Coord pos = {0, 0};
 	uint len;
 	Coord check;
 	for(uint y = 0; y < GRIDLEN; y++){
 		for(uint x = 0; x < GRIDLEN; x++){
-			if(grid[x][y] == letter){
+			if(grid[x][y] == *selected){
 				pos.x = x;
 				pos.y = y;
 				goto ESCAPE;
@@ -16,17 +15,20 @@ bool shiftCar(const char letter, const Direction dir)
 		}
 	}
 	ESCAPE:
+	if(*selected == 'X' && pos.x == 4 && pos.y == 2){
+		printf("Win cond!\n");
+		*selected = '!';
+		return;
+	}
 	if(dirUD(dir)){
-		if(grid[pos.x][pos.y+1] != letter)
-			return false;
+		if(grid[pos.x][pos.y+1] != *selected)
+			return;
 	}else{
-		if(letter == 'X' && pos.x == 4 && pos.y == 2)
-			return true;
-		if(grid[pos.x+1][pos.y] != letter)
-			return false;
+		if(grid[pos.x+1][pos.y] != *selected)
+			return;
 	}
 	for(uint i = 0; i < NUMCAR; i++){
-		if(carArr[i].letter == letter){
+		if(carArr[i].letter == *selected){
 			len = carArr[i].len;
 			break;
 		}
@@ -35,16 +37,18 @@ bool shiftCar(const char letter, const Direction dir)
 	if(grid[check.x][check.y] == '-'){
 		if(dirNEG(dir))
 			pos = coordShift(pos, dirINV(dir), len-1);
-		grid[check.x][check.y] = letter;
+		grid[check.x][check.y] = *selected;
 		grid[pos.x][pos.y] = '-';
 	}
-	return false;
+	return;
 }
 
 void events(Ticks frameEnd, char *selected)
 {
 	i32 ticksLeft = frameEnd - getTicks();
+	static Coord clickPos = {-1,-1};
 	while(ticksLeft > 0){
+		Coord relativeMotion;
 		static Event event;
 		if(!SDL_WaitEventTimeout(&event, ticksLeft))
 			return;
@@ -63,37 +67,64 @@ void events(Ticks frameEnd, char *selected)
 			case SDLK_UP:
 				if(*selected == '-')
 					break;
-				shiftCar(*selected, DIR_U);
+				shiftCar(selected, DIR_U);
 				break;
 			case SDLK_d:
 			case SDLK_RIGHT:
 				if(*selected == '-')
 					break;
-				if(shiftCar(*selected, DIR_R))
-					*selected = '!';	// win condition
+				shiftCar(selected, DIR_R);
+				if(*selected == '!')
+					return;
 				break;
 			case SDLK_s:
 			case SDLK_DOWN:
 				if(*selected == '-')
 					break;
-				shiftCar(*selected, DIR_D);
+				shiftCar(selected, DIR_D);
 				break;
 			case SDLK_a:
 			case SDLK_LEFT:
 				if(*selected == '-')
 					break;
-				shiftCar(*selected, DIR_L);
+				shiftCar(selected, DIR_L);
 				break;
 			}
 			break;
 		case SDL_MOUSEMOTION:
-
+			if(
+				SDL_GetMouseState(NULL, NULL) &
+				SDL_BUTTON(SDL_BUTTON_LEFT) &&
+				*selected != '-' &&
+				clickPos.x != -1 &&
+				clickPos.y != -1
+			){
+				relativeMotion.x = event.motion.x - clickPos.x;
+				relativeMotion.y = event.motion.y - clickPos.y;
+				if(ABS(relativeMotion.x) > SCALE){
+					clickPos.x=event.motion.x;
+					shiftCar(selected, relativeMotion.x>0?DIR_R:DIR_L);
+					if(*selected == '!')
+						return;
+				}
+				if(ABS(relativeMotion.y) > SCALE){
+					clickPos.y=event.motion.y;
+					shiftCar(selected, relativeMotion.y>0?DIR_D:DIR_U);
+				}
+			}
 			break;
 		case SDL_MOUSEBUTTONDOWN:
 			switch (event.button.button) {
 			case SDL_BUTTON_LEFT:
 				*selected =
 		grid[screenToGrid(event.button.x)][screenToGrid(event.button.y)];
+				if(*selected == '-'){
+					clickPos.x = -1;
+					clickPos.y = -1;
+				}else{
+					clickPos.x = event.button.x;
+					clickPos.y = event.button.y;
+				}
 				break;
 			case SDL_BUTTON_RIGHT:
 
@@ -106,7 +137,8 @@ void events(Ticks frameEnd, char *selected)
 		case SDL_MOUSEBUTTONUP:
 			switch (event.button.button) {
 			case SDL_BUTTON_LEFT:
-
+				clickPos.x = -1;
+				clickPos.y = -1;
 				break;
 			case SDL_BUTTON_RIGHT:
 

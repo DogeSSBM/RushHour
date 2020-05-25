@@ -38,7 +38,7 @@ bool menuSelect(Ticks frameEnd, char *levelStr)
 				break;
 			case SDLK_SPACE:
 			case SDLK_RETURN:
-				printf("Selected level %d\n");
+				printf("Selected level %s\n", levelStr);
 				return true;
 				break;
 			}
@@ -53,7 +53,10 @@ void menu(void)
 {
 	setFontSize(SCALE);
 	Ticks frameStart;
-	static char levelStr[] = "01";
+	static char levelStr[] = "00";
+	sprintf(levelStr,"%02u",
+		clamp((strToInt(levelStr)+1),1,41)
+	);
 	printf("Entering menu\n");
 	do{
 		frameStart = getTicks();

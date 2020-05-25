@@ -186,7 +186,7 @@ setRGB	Graphics.h	/^void setRGB(u8 r, u8 g, u8 b)$/;"	f
 setRGBA	Graphics.h	/^void setRGBA(u8 r, u8 g, u8 b, u8 a)$/;"	f
 setWindowMode	Graphics.h	/^void setWindowMode(const WindowMode mode)$/;"	f
 setWindowSize	Graphics.h	/^void setWindowSize(const uint x, const uint y)$/;"	f
-shiftCar	Events.h	/^bool shiftCar(const char letter, const Direction dir)$/;"	f
+shiftCar	Events.h	/^void shiftCar(char *selected, const Direction dir)$/;"	f
 shiftL	GetInt.h	/^int shiftL(int num, int digits)$/;"	f
 shiftR	GetInt.h	/^int shiftR(const int num)$/;"	f
 size	Text.h	/^	int size;$/;"	m	struct:__anon8

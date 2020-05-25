@@ -56,7 +56,6 @@ char cycleCar(const char selected, bool prev)
 			}else{
 				printf("Next\n");
 				do{
-
 					i=(i+1)%NUMCAR;
 				}while(!carArr[i].enabled);
 				return carArr[i].letter;

@@ -119,7 +119,7 @@ void text_init(void)
 	gfx.fontColor = WHITE;
 	setFontSize(SCALE);
 	if(!gfx.font){
-		printf("Unable to open font or set font size!\n", TTF_GetError());
+		printf("Unable to open font or set font size! Error: %s\n", TTF_GetError());
 		exit(0);
 	}
 	printf("Adding text_quit to atexit()\n");

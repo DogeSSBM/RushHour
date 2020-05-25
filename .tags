@@ -97,13 +97,13 @@ color	Cars.h	/^	Color color;$/;"	m	struct:__anon2
 coordClamp	Types.h	/^Coord coordClamp(const Coord coord, const int min, const int max)$/;"	f
 coordShift	Types.h	/^Coord coordShift(const Coord coord, const Direction dir, const int units)$/;"	f
 defaultColor	Graphics.h	/^	Color defaultColor;$/;"	m	struct:__anon7
-dirINV	Types.h	86;"	d
-dirLR	Types.h	87;"	d
-dirNEG	Types.h	90;"	d
-dirPOS	Types.h	89;"	d
-dirROL	Types.h	82;"	d
-dirROR	Types.h	81;"	d
-dirUD	Types.h	88;"	d
+dirINV	Types.h	82;"	d
+dirLR	Types.h	83;"	d
+dirNEG	Types.h	86;"	d
+dirPOS	Types.h	85;"	d
+dirROL	Types.h	78;"	d
+dirROR	Types.h	77;"	d
+dirUD	Types.h	84;"	d
 draw	Graphics.h	/^void draw()$/;"	f
 drawCarOutline	Draw.h	/^void drawCarOutline(const char letter)$/;"	f
 drawCarSquare	Draw.h	/^void drawCarSquare(const uint x, const uint y, const char letter)$/;"	f
@@ -116,7 +116,7 @@ drawHLine	Graphics.h	/^void drawHLine(uint x, uint y, int len)$/;"	f
 drawImg	Image.h	/^void drawImg(Img *image)$/;"	f
 drawLine	Graphics.h	/^void drawLine(uint x1, uint y1, uint x2, uint y2)$/;"	f
 drawLineCoords	Graphics.h	/^void drawLineCoords(const Coord pos1, const Coord pos2)$/;"	f
-drawPixel	Graphics.h	/^void drawPixel(uint x, uint y)$/;"	f
+drawPixel	Graphics.h	/^void drawPixel(const uint x, const uint y)$/;"	f
 drawRect	Graphics.h	/^void drawRect(uint x, uint y, uint xlen, uint ylen)$/;"	f
 drawSquare	Graphics.h	/^void drawSquare(uint x, uint y, uint len)$/;"	f
 drawText	Text.h	/^void drawText(uint x, uint y, const char *text)$/;"	f
@@ -168,7 +168,6 @@ menu	Menu.h	/^void menu(void)$/;"	f
 menuSelect	Menu.h	/^bool menuSelect(Ticks frameEnd, char *levelStr)$/;"	f
 moveCarGrid	Grid.h	/^void moveCarGrid()$/;"	f
 parseLevelFile	Grid.h	/^bool parseLevelFile(File *f)$/;"	f
-printCoord	Types.h	/^void printCoord(const Coord pos)$/;"	f
 printGrid	Grid.h	/^void printGrid(void)$/;"	f
 r	Text.h	/^	Rect r;$/;"	m	struct:__anon8
 randRange	DogeUtil.h	/^float randRange(float a, float b)$/;"	f
@@ -179,14 +178,14 @@ rgbaToColor	Colors.h	/^Color rgbaToColor(const uint R, const uint G, const uint 
 sameCoord	Types.h	/^bool sameCoord(const Coord pos1, const Coord pos2)$/;"	f
 saveScreenshot	Graphics.h	/^void saveScreenshot(const char* file_name)$/;"	f
 screenToGrid	Grid.h	/^uint screenToGrid(const uint pos)$/;"	f
-setBlend	Graphics.h	/^void setBlend(BlendMode mode)$/;"	f
-setColor	Graphics.h	/^void setColor(Color c)$/;"	f
+setBlend	Graphics.h	/^void setBlend(const BlendMode mode)$/;"	f
+setColor	Graphics.h	/^void setColor(const Color c)$/;"	f
 setFontColor	Text.h	/^void setFontColor(Color c)$/;"	f
 setFontSize	Text.h	/^void setFontSize(int size)$/;"	f
 setRGB	Graphics.h	/^void setRGB(u8 r, u8 g, u8 b)$/;"	f
 setRGBA	Graphics.h	/^void setRGBA(u8 r, u8 g, u8 b, u8 a)$/;"	f
 setWindowMode	Graphics.h	/^void setWindowMode(const WindowMode mode)$/;"	f
-setWindowSize	Graphics.h	/^void setWindowSize(uint x, uint y)$/;"	f
+setWindowSize	Graphics.h	/^void setWindowSize(const uint x, const uint y)$/;"	f
 shiftCar	Events.h	/^bool shiftCar(const char letter, const Direction dir)$/;"	f
 shiftL	GetInt.h	/^int shiftL(int num, int digits)$/;"	f
 shiftR	GetInt.h	/^int shiftR(const int num)$/;"	f

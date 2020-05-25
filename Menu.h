@@ -18,18 +18,25 @@ bool menuSelect(Ticks frameEnd, char *levelStr)
 				printf("Quitting now!\n");
 				exit(0);
 				break;
+			case SDLK_w:
+			case SDLK_d:
 			case SDLK_UP:
+			case SDLK_RIGHT:
 				sprintf(levelStr,"%02u",
 					clamp((strToInt(levelStr)+1),1,41)
 				);
 				printf("levelStr: %s\n",levelStr);
 				break;
+			case SDLK_s:
+			case SDLK_a:
 			case SDLK_DOWN:
+			case SDLK_LEFT:
 				sprintf(levelStr,"%02u",
 					clamp((strToInt(levelStr)-1),1,41)
 				);
 				printf("levelStr: %s\n",levelStr);
 				break;
+			case SDLK_SPACE:
 			case SDLK_RETURN:
 				printf("Selected level %d\n");
 				return true;

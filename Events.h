@@ -126,13 +126,13 @@ void events(Ticks frameEnd, char *selected)
 			){
 				relativeMotion.x = event.motion.x - clickPos.x;
 				relativeMotion.y = event.motion.y - clickPos.y;
-				if(ABS(relativeMotion.x) > SCALE){
+				if(ABS(relativeMotion.x) > HSCALE){
 					clickPos.x=event.motion.x;
 					shiftCar(selected, relativeMotion.x>0?DIR_R:DIR_L);
 					if(*selected == '!')
 						return;
 				}
-				if(ABS(relativeMotion.y) > SCALE){
+				if(ABS(relativeMotion.y) > HSCALE){
 					clickPos.y=event.motion.y;
 					shiftCar(selected, relativeMotion.y>0?DIR_D:DIR_U);
 				}

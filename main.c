@@ -15,10 +15,10 @@
 int main(int argc, char const *argv[])
 {
 	init(WINLEN, WINLEN);
+	menu(false);
 	while(1){
-		menu();
 		char selected = 'X';
-		while(selected != '!'){
+		while(selected != '!' && selected != '~'){
 			Ticks frameStart = getTicks();
 			clear();
 			drawGrid();
@@ -28,6 +28,7 @@ int main(int argc, char const *argv[])
 			draw();
 			events(frameStart + TPS, &selected);
 		}
+		menu(selected == '!');
 	}
 	return 0;
 }

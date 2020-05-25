@@ -71,14 +71,16 @@ bool menuSelect(Ticks frameEnd, char *levelStr)
 	return false;
 }
 
-void menu(void)
+void menu(const bool increment)
 {
 	setFontSize(SCALE);
 	Ticks frameStart;
-	static char levelStr[] = "00";
-	sprintf(levelStr,"%02u",
-		clamp((strToInt(levelStr)+1),1,41)
-	);
+	static char levelStr[] = "01";
+	if(increment){
+		sprintf(levelStr,"%02u",
+			clamp((strToInt(levelStr)+1),1,41)
+		);
+	}
 	printf("Entering menu\n");
 	do{
 		frameStart = getTicks();

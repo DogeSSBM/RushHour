@@ -164,7 +164,7 @@ loadDrawImg	Image.h	/^void loadDrawImg(const char *imgFile)$/;"	f
 loadGrid	Grid.h	/^void loadGrid(const char *levelStr)$/;"	f
 loadImg	Image.h	/^Img* loadImg(const char *imgFile)$/;"	f
 main	main.c	/^int main(int argc, char const *argv[])$/;"	f
-menu	Menu.h	/^void menu(void)$/;"	f
+menu	Menu.h	/^void menu(const bool increment)$/;"	f
 menuSelect	Menu.h	/^bool menuSelect(Ticks frameEnd, char *levelStr)$/;"	f
 moveCarGrid	Grid.h	/^void moveCarGrid()$/;"	f
 parseLevelFile	Grid.h	/^bool parseLevelFile(File *f)$/;"	f

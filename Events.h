@@ -60,8 +60,8 @@ void events(Ticks frameEnd, char *selected)
 		case SDL_KEYDOWN:
 			switch (event.key.keysym.sym) {
 			case SDLK_ESCAPE:
-				printf("Quitting now!\n");
-				exit(0);
+				*selected = '~';
+				return;
 				break;
 			case SDLK_w:
 			case SDLK_UP:

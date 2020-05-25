@@ -43,6 +43,28 @@ bool menuSelect(Ticks frameEnd, char *levelStr)
 				break;
 			}
 			break;
+		case SDL_MOUSEBUTTONDOWN:
+			if(event.button.button == SDL_BUTTON_LEFT){
+				printf("Selected level %s\n", levelStr);
+				return true;
+				break;
+			}
+			break;
+		case SDL_MOUSEWHEEL:
+			if(event.wheel.y>0){
+				sprintf(levelStr,"%02u",
+					clamp((strToInt(levelStr)+1),1,41)
+				);
+				printf("levelStr: %s\n",levelStr);
+				break;
+			}else if(event.wheel.y<0){
+				sprintf(levelStr,"%02u",
+					clamp((strToInt(levelStr)-1),1,41)
+				);
+				printf("levelStr: %s\n",levelStr);
+				break;
+			}
+			break;
 		}
 		ticksLeft = frameEnd - getTicks();
 	}

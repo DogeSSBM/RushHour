@@ -90,12 +90,16 @@ arr	Types.h	/^	int arr[2];$/;"	m	union:__anon4
 backColor	Text.h	/^	Color backColor;$/;"	m	struct:__anon8
 carArr	Cars.h	/^Car carArr[NUMCAR] = {$/;"	v
 charToInt	GetInt.h	/^int charToInt(const char c)$/;"	f
+checkGrid	Grid.h	/^char checkGrid(void)$/;"	f
+checkLevel	Grid.h	/^void checkLevel(const uint level)$/;"	f
+checkLevels	Grid.h	/^void checkLevels(void)$/;"	f
 clamp	Types.h	/^int clamp(const int n, const int min, const int max)$/;"	f
 clear	Graphics.h	/^void clear()$/;"	f
 clearTerminal	DogeUtil.h	/^void clearTerminal(void)$/;"	f
 color	Cars.h	/^	Color color;$/;"	m	struct:__anon2
 coordClamp	Types.h	/^Coord coordClamp(const Coord coord, const int min, const int max)$/;"	f
 coordShift	Types.h	/^Coord coordShift(const Coord coord, const Direction dir, const int units)$/;"	f
+countChar	Grid.h	/^uint countChar(const char c)$/;"	f
 cycleCar	Events.h	/^char cycleCar(const char selected, bool prev)$/;"	f
 defaultColor	Graphics.h	/^	Color defaultColor;$/;"	m	struct:__anon7
 dirINV	Types.h	82;"	d
@@ -137,6 +141,7 @@ font	Graphics.h	/^	TTF_Font* font;$/;"	m	struct:__anon7
 fontColor	Graphics.h	/^	Color fontColor;$/;"	m	struct:__anon7
 fontSize	Graphics.h	/^	int fontSize;$/;"	m	struct:__anon7
 freeImg	Image.h	/^void freeImg(Img *image)$/;"	f
+getCharCarLen	Grid.h	/^uint getCharCarLen(const char c)$/;"	f
 getColor	Graphics.h	/^Color getColor(void)$/;"	f
 getInt	GetInt.h	/^int getInt(void)$/;"	f
 getR	GetInt.h	/^int getR(const int num)$/;"	f

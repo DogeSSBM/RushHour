@@ -75,7 +75,7 @@ void loadGrid(const char *levelStr)
 	if(!parseLevelFile(f)){
 		printf("Error parsing level file\n");
 	}
-	printGrid();
+	//printGrid();
 }
 
 // grid position to screen pixel location
@@ -95,4 +95,60 @@ Coord gridCoordToScreen(const Coord gpos)
 {
 	const Coord spos = {gridToScreen(gpos.x), gridToScreen(gpos.y)};
 	return spos;
+}
+
+uint countChar(const char c)
+{
+	uint total = 0;
+	for(uint y = 0; y < GRIDLEN; y++){
+		for(uint x = 0; x < GRIDLEN; x++){
+			total += grid[x][y] == c;
+		}
+	}
+	return total;
+}
+
+uint getCharCarLen(const char c)
+{
+	for(uint i = 0; i < NUMCAR; i++){
+		if(carArr[i].letter == c)
+			return carArr[i].len;
+	}
+	printf("Err! Car %c does not exist\n", c);
+	exit(1);
+}
+
+char checkGrid(void)
+{
+	for(uint y = 0; y < GRIDLEN; y++){
+		for(uint x = 0; x < GRIDLEN; x++){
+			const char c = grid[x][y];
+			if(c != '-' && countChar(c) != getCharCarLen(c))
+				return c;
+		}
+	}
+	return '-';
+}
+
+void checkLevel(const uint level)
+{
+	const char c = checkGrid();
+	if(c != '-'){
+		printf("Level %02u: ", level);
+		printf("Failed char: %c\n", c);
+		printGrid();
+	}
+	//else{printf("Passed\n");}
+}
+
+void checkLevels(void)
+{
+	static char levelStr[] = "00";
+	for(uint i = 0; i < 26; i++){
+		sprintf(levelStr,"%02u",
+			clamp((strToInt(levelStr)+1),1,41)
+		);
+		loadGrid(levelStr);
+		checkLevel(i+1);
+	}
 }

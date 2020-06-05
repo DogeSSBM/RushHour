@@ -14,6 +14,7 @@
 
 int main(int argc, char const *argv[])
 {
+	checkLevels();
 	init(WINLEN, WINLEN);
 	menu(false);
 	while(1){

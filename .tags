@@ -11,36 +11,36 @@ BLEND_ALPHA	Types.h	46;"	d
 BLEND_MOD	Types.h	48;"	d
 BLEND_NONE	Types.h	45;"	d
 BLUE	Colors.h	/^const Color BLUE 		= {0x00, 0x00, 0xFF, 0xFF};$/;"	v
-BORDERLESS	Types.h	/^	BORDERLESS	=		SDL_WINDOW_FULLSCREEN_DESKTOP,$/;"	e	enum:__anon5
+BORDERLESS	Types.h	/^	BORDERLESS	=		SDL_WINDOW_FULLSCREEN_DESKTOP,$/;"	e	enum:__anon3
 BlendMode	Types.h	/^typedef SDL_BlendMode		BlendMode;$/;"	t
-CAR_A	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon2
-CAR_B	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon2
-CAR_C	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon2
-CAR_D	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon2
-CAR_E	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon2
-CAR_F	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon2
-CAR_G	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon2
-CAR_H	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon2
-CAR_I	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon2
-CAR_J	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon2
-CAR_K	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon2
-CAR_O	Cars.h	/^	CAR_O,CAR_P,CAR_Q,CAR_R,$/;"	e	enum:__anon2
-CAR_P	Cars.h	/^	CAR_O,CAR_P,CAR_Q,CAR_R,$/;"	e	enum:__anon2
-CAR_Q	Cars.h	/^	CAR_O,CAR_P,CAR_Q,CAR_R,$/;"	e	enum:__anon2
-CAR_R	Cars.h	/^	CAR_O,CAR_P,CAR_Q,CAR_R,$/;"	e	enum:__anon2
-CAR_X	Cars.h	/^	CAR_X$/;"	e	enum:__anon2
-Car	Cars.h	/^}Car;$/;"	t	typeref:struct:__anon3
-CarArrIndex	Cars.h	/^}CarArrIndex;$/;"	t	typeref:enum:__anon2
+CAR_A	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon1
+CAR_B	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon1
+CAR_C	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon1
+CAR_D	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon1
+CAR_E	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon1
+CAR_F	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon1
+CAR_G	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon1
+CAR_H	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon1
+CAR_I	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon1
+CAR_J	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon1
+CAR_K	Cars.h	/^	CAR_A,CAR_B,CAR_C,CAR_D,CAR_E,CAR_F,CAR_G,CAR_H,CAR_I,CAR_J,CAR_K,$/;"	e	enum:__anon1
+CAR_O	Cars.h	/^	CAR_O,CAR_P,CAR_Q,CAR_R,$/;"	e	enum:__anon1
+CAR_P	Cars.h	/^	CAR_O,CAR_P,CAR_Q,CAR_R,$/;"	e	enum:__anon1
+CAR_Q	Cars.h	/^	CAR_O,CAR_P,CAR_Q,CAR_R,$/;"	e	enum:__anon1
+CAR_R	Cars.h	/^	CAR_O,CAR_P,CAR_Q,CAR_R,$/;"	e	enum:__anon1
+CAR_X	Cars.h	/^	CAR_X$/;"	e	enum:__anon1
+Car	Cars.h	/^}Car;$/;"	t	typeref:struct:__anon2
+CarArrIndex	Cars.h	/^}CarArrIndex;$/;"	t	typeref:enum:__anon1
 Color	Types.h	/^typedef SDL_Color 		Color;$/;"	t
-Coord	Types.h	/^}Coord;$/;"	t	typeref:union:__anon6
-DIR_D	Types.h	/^	DIR_D = 0b10,$/;"	e	enum:__anon8
-DIR_L	Types.h	/^	DIR_L = 0b11$/;"	e	enum:__anon8
-DIR_R	Types.h	/^	DIR_R = 0b01,$/;"	e	enum:__anon8
-DIR_U	Types.h	/^	DIR_U = 0b00,$/;"	e	enum:__anon8
-Direction	Types.h	/^}Direction;$/;"	t	typeref:enum:__anon8
+Coord	Types.h	/^}Coord;$/;"	t	typeref:union:__anon4
+DIR_D	Types.h	/^	DIR_D = 0b10,$/;"	e	enum:__anon6
+DIR_L	Types.h	/^	DIR_L = 0b11$/;"	e	enum:__anon6
+DIR_R	Types.h	/^	DIR_R = 0b01,$/;"	e	enum:__anon6
+DIR_U	Types.h	/^	DIR_U = 0b00,$/;"	e	enum:__anon6
+Direction	Types.h	/^}Direction;$/;"	t	typeref:enum:__anon6
 Event	Types.h	/^typedef SDL_Event			Event;$/;"	t
 FPS	main.c	11;"	d	file:
-FULLSCREEN	Types.h	/^	FULLSCREEN	=		SDL_WINDOW_FULLSCREEN,$/;"	e	enum:__anon5
+FULLSCREEN	Types.h	/^	FULLSCREEN	=		SDL_WINDOW_FULLSCREEN,$/;"	e	enum:__anon3
 File	Types.h	/^typedef FILE			File;$/;"	t
 GREEN	Colors.h	/^const Color GREEN 	= {0x00, 0xFF, 0x00, 0xFF};$/;"	v
 GREY	Colors.h	/^const Color GREY		= {0x80, 0x80, 0x80, 0xFF};$/;"	v
@@ -73,7 +73,7 @@ TB_draw	Text.h	/^void TB_draw(TextBox *tb)$/;"	f
 TB_setText	Text.h	/^void TB_setText(TextBox *tb, const char *text)$/;"	f
 TB_setTextSize	Text.h	/^void TB_setTextSize(TextBox *tb, int size)$/;"	f
 TPS	main.c	12;"	d	file:
-TextBox	Text.h	/^}TextBox;$/;"	t	typeref:struct:__anon4
+TextBox	Text.h	/^}TextBox;$/;"	t	typeref:struct:__anon8
 Ticks	Types.h	/^typedef unsigned int		Ticks;$/;"	t
 Time	Types.h	/^typedef time_t			Time;$/;"	t
 U16MAX	Types.h	32;"	d
@@ -81,23 +81,23 @@ U32MAX	Types.h	33;"	d
 U64MAX	Types.h	34;"	d
 U8MAX	Types.h	31;"	d
 WHITE	Colors.h	/^const Color WHITE		= {0xFF, 0xFF, 0xFF, 0xFF};$/;"	v
-WINDOWED	Types.h	/^	WINDOWED	=		0$/;"	e	enum:__anon5
+WINDOWED	Types.h	/^	WINDOWED	=		0$/;"	e	enum:__anon3
 WINLEN	main.c	3;"	d	file:
-WindowMode	Types.h	/^}WindowMode;$/;"	t	typeref:enum:__anon5
+WindowMode	Types.h	/^}WindowMode;$/;"	t	typeref:enum:__anon3
 YELLOW	Colors.h	/^const Color YELLOW	= {0xFF, 0xFF, 0x00, 0xFF};$/;"	v
 ZFLOOR	Types.h	37;"	d
-arr	Types.h	/^	int arr[2];$/;"	m	union:__anon6
-backColor	Text.h	/^	Color backColor;$/;"	m	struct:__anon4
+arr	Types.h	/^	int arr[2];$/;"	m	union:__anon4
+backColor	Text.h	/^	Color backColor;$/;"	m	struct:__anon8
 carArr	Cars.h	/^Car carArr[NUMCAR] = {$/;"	v
 charToInt	GetInt.h	/^int charToInt(const char c)$/;"	f
 clamp	Types.h	/^int clamp(const int n, const int min, const int max)$/;"	f
 clear	Graphics.h	/^void clear()$/;"	f
 clearTerminal	DogeUtil.h	/^void clearTerminal(void)$/;"	f
-color	Cars.h	/^	Color color;$/;"	m	struct:__anon3
+color	Cars.h	/^	Color color;$/;"	m	struct:__anon2
 coordClamp	Types.h	/^Coord coordClamp(const Coord coord, const int min, const int max)$/;"	f
 coordShift	Types.h	/^Coord coordShift(const Coord coord, const Direction dir, const int units)$/;"	f
 cycleCar	Events.h	/^char cycleCar(const char selected, bool prev)$/;"	f
-defaultColor	Graphics.h	/^	Color defaultColor;$/;"	m	struct:__anon1
+defaultColor	Graphics.h	/^	Color defaultColor;$/;"	m	struct:__anon7
 dirINV	Types.h	82;"	d
 dirLR	Types.h	83;"	d
 dirNEG	Types.h	86;"	d
@@ -123,7 +123,7 @@ drawSquare	Graphics.h	/^void drawSquare(uint x, uint y, uint len)$/;"	f
 drawText	Text.h	/^void drawText(uint x, uint y, const char *text)$/;"	f
 drawTextCentered	Text.h	/^void drawTextCentered(uint x, uint y, const char *text)$/;"	f
 drawVLine	Graphics.h	/^void drawVLine(uint x, uint y, int len)$/;"	f
-enabled	Cars.h	/^	bool enabled;$/;"	m	struct:__anon3
+enabled	Cars.h	/^	bool enabled;$/;"	m	struct:__anon2
 events	Events.h	/^void events(Ticks frameEnd, char *selected)$/;"	f
 fillBorder	Graphics.h	/^void fillBorder(uint x, uint y, uint xlen, uint ylen, int b)$/;"	f
 fillCircle	Graphics.h	/^void fillCircle(uint x, uint y, uint radius)$/;"	f
@@ -133,15 +133,15 @@ fillScreen	Graphics.h	/^void fillScreen()$/;"	f
 fillSquare	Graphics.h	/^void fillSquare(uint x, uint y, uint len)$/;"	f
 fillSquareCoord	Graphics.h	/^void fillSquareCoord(const Coord pos, const uint len)$/;"	f
 flen	DogeUtil.h	/^lint flen(File *f)$/;"	f
-font	Graphics.h	/^	TTF_Font* font;$/;"	m	struct:__anon1
-fontColor	Graphics.h	/^	Color fontColor;$/;"	m	struct:__anon1
-fontSize	Graphics.h	/^	int fontSize;$/;"	m	struct:__anon1
+font	Graphics.h	/^	TTF_Font* font;$/;"	m	struct:__anon7
+fontColor	Graphics.h	/^	Color fontColor;$/;"	m	struct:__anon7
+fontSize	Graphics.h	/^	int fontSize;$/;"	m	struct:__anon7
 freeImg	Image.h	/^void freeImg(Img *image)$/;"	f
 getColor	Graphics.h	/^Color getColor(void)$/;"	f
 getInt	GetInt.h	/^int getInt(void)$/;"	f
 getR	GetInt.h	/^int getR(const int num)$/;"	f
 getTicks	Timing.h	/^Ticks getTicks(void)$/;"	f
-gfx	Graphics.h	/^}gfx = {};$/;"	v	typeref:struct:__anon1
+gfx	Graphics.h	/^}gfx = {};$/;"	v	typeref:struct:__anon7
 gfx_init	Graphics.h	/^void gfx_init(uint winXlen, uint winYlen)$/;"	f
 gfx_quit	Graphics.h	/^void gfx_quit(void)$/;"	f
 grid	Grid.h	/^char grid[GRIDLEN][GRIDLEN];$/;"	v
@@ -154,13 +154,13 @@ i8	Types.h	/^typedef int8_t			i8;$/;"	t
 img_init	Image.h	/^void img_init(void)$/;"	f
 img_quit	Image.h	/^void img_quit(void)$/;"	f
 inBound	Types.h	/^bool inBound(const int n, const int min, const int max)$/;"	f
-index	Cars.h	/^	CarArrIndex index;$/;"	m	struct:__anon3
+index	Cars.h	/^	CarArrIndex index;$/;"	m	struct:__anon2
 init	DogeUtil.h	/^void init(uint winXlen, uint winYlen)$/;"	f
 intToChar	GetInt.h	/^char intToChar(const int num)$/;"	f
 intToStr	GetInt.h	/^char* intToStr(int num, char* str)$/;"	f
 isValidChar	Grid.h	/^bool isValidChar(const int c)$/;"	f
-len	Cars.h	/^	uint len;$/;"	m	struct:__anon3
-letter	Cars.h	/^	char letter;$/;"	m	struct:__anon3
+len	Cars.h	/^	uint len;$/;"	m	struct:__anon2
+letter	Cars.h	/^	char letter;$/;"	m	struct:__anon2
 lint	Types.h	/^typedef long int			lint;$/;"	t
 loadDrawImg	Image.h	/^void loadDrawImg(const char *imgFile)$/;"	f
 loadGrid	Grid.h	/^void loadGrid(const char *levelStr)$/;"	f
@@ -170,10 +170,10 @@ menu	Menu.h	/^void menu(const bool increment)$/;"	f
 menuSelect	Menu.h	/^bool menuSelect(Ticks frameEnd, char *levelStr)$/;"	f
 parseLevelFile	Grid.h	/^bool parseLevelFile(File *f)$/;"	f
 printGrid	Grid.h	/^void printGrid(void)$/;"	f
-r	Text.h	/^	Rect r;$/;"	m	struct:__anon4
+r	Text.h	/^	Rect r;$/;"	m	struct:__anon8
 randRange	DogeUtil.h	/^float randRange(float a, float b)$/;"	f
 readin	DogeUtil.h	/^char* readin(char *buffer, int size)$/;"	f
-renderer	Graphics.h	/^	SDL_Renderer* renderer;$/;"	m	struct:__anon1
+renderer	Graphics.h	/^	SDL_Renderer* renderer;$/;"	m	struct:__anon7
 rgbToColor	Colors.h	/^Color rgbToColor(const uint R, const uint G, const uint B)$/;"	f
 rgbaToColor	Colors.h	/^Color rgbaToColor(const uint R, const uint G, const uint B, const uint A)$/;"	f
 sameCoord	Types.h	/^bool sameCoord(const Coord pos1, const Coord pos2)$/;"	f
@@ -190,10 +190,10 @@ setWindowSize	Graphics.h	/^void setWindowSize(const uint x, const uint y)$/;"	f
 shiftCar	Events.h	/^void shiftCar(char *selected, const Direction dir)$/;"	f
 shiftL	GetInt.h	/^int shiftL(int num, int digits)$/;"	f
 shiftR	GetInt.h	/^int shiftR(const int num)$/;"	f
-size	Text.h	/^	int size;$/;"	m	struct:__anon4
+size	Text.h	/^	int size;$/;"	m	struct:__anon8
 strToInt	GetInt.h	/^int strToInt(const char *str)$/;"	f
-text	Text.h	/^	char* text;$/;"	m	struct:__anon4
-textColor	Text.h	/^	Color textColor;$/;"	m	struct:__anon4
+text	Text.h	/^	char* text;$/;"	m	struct:__anon8
+textColor	Text.h	/^	Color textColor;$/;"	m	struct:__anon8
 text_init	Text.h	/^void text_init(void)$/;"	f
 text_quit	Text.h	/^void text_quit(void)$/;"	f
 u16	Types.h	/^typedef uint16_t			u16;$/;"	t
@@ -204,9 +204,9 @@ uchar	Types.h	/^typedef unsigned char		uchar;$/;"	t
 uint	Types.h	/^typedef unsigned int		uint;$/;"	t
 ul	Types.h	/^typedef unsigned long		ul;$/;"	t
 ull	Types.h	/^typedef unsigned long long	ull;$/;"	t
-window	Graphics.h	/^	SDL_Window* window;$/;"	m	struct:__anon1
+window	Graphics.h	/^	SDL_Window* window;$/;"	m	struct:__anon7
 wrap	Types.h	/^int wrap(const int n, const int min, const int max)$/;"	f
-x	Types.h	/^		int x;$/;"	m	struct:__anon6::__anon7
-xlen	Graphics.h	/^	uint xlen, ylen;$/;"	m	struct:__anon1
-y	Types.h	/^		int y;$/;"	m	struct:__anon6::__anon7
-ylen	Graphics.h	/^	uint xlen, ylen;$/;"	m	struct:__anon1
+x	Types.h	/^		int x;$/;"	m	struct:__anon4::__anon5
+xlen	Graphics.h	/^	uint xlen, ylen;$/;"	m	struct:__anon7
+y	Types.h	/^		int y;$/;"	m	struct:__anon4::__anon5
+ylen	Graphics.h	/^	uint xlen, ylen;$/;"	m	struct:__anon7

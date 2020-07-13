@@ -85,6 +85,7 @@ typedef enum{
 #define dirPOS(d)			((d)==DIR_R||(d)==DIR_D)
 #define dirNEG(d)			((d)==DIR_L||(d)==DIR_U)
 
+// Bounds n between min (inclusive) and max (exclusive)
 static inline
 int clamp(const int n, const int min, const int max)
 {
@@ -95,6 +96,7 @@ int clamp(const int n, const int min, const int max)
 	return n;
 }
 
+// Returns true if n is between min (inclusive) and max (exclusive)
 static inline
 bool inBound(const int n, const int min, const int max)
 {

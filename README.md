@@ -5,7 +5,7 @@
 <img src="./Demo.gif" height="500">
 
 ## Description
-An implementation of the puzzle game ![Rush Hour](https://en.wikipedia.org/wiki/Rush_Hour_(puzzle)). Written in C and uses SDL2.
+An implementation of the puzzle game [Rush Hour](https://en.wikipedia.org/wiki/Rush_Hour_(puzzle)). Written in C and uses SDL2.
 
 ## Setup
 1. Install SDL2 [here](https://www.libsdl.org/download-2.0.php).

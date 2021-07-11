@@ -29,9 +29,9 @@ void drawGrid(void)
 	}
 	setFontSize(HSCALE);
 	for(uint i = 0; i < GRIDLEN; i++){
-		drawText(i*SCALE+QSCALE, 2*SCALE+32, "-");
-		drawText(i*SCALE+QSCALE+20, 2*SCALE+32, "-");
-		drawText(i*SCALE+QSCALE+30, 2*SCALE+32, "-");
+		drawText(i*SCALE+QSCALE-3,    2*SCALE+22, "-");
+        drawText(i*SCALE+QSCALE+7, 2*SCALE+22, "-");
+		drawText(i*SCALE+QSCALE+17, 2*SCALE+22, "-");
 		drawText(i*SCALE+HSCALE-10, 2*SCALE+QSCALE, ">");
 	}
 }

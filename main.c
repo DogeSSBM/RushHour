@@ -1,6 +1,6 @@
 #define GRIDLEN			6
 
-#define WINLEN			900
+#define WINLEN			600
 #define HWINLEN			(WINLEN/2)
 #define QWINLEN			(HWINLEN/2)
 

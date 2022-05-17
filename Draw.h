@@ -36,11 +36,11 @@ void drawGrid(void)
 	}
 }
 
-void drawCarSquareOutline(const uint x, const uint y)
+void drawCarSquareOutline(const uint x, const uint y, const bool selected)
 {
 	const uint sx = gridToScreen(x);
 	const uint sy = gridToScreen(y);
-	setColor(WHITE);
+	setColor(selected ? WHITE : BLACK);
 	fillSquare(x*SCALE+5, y*SCALE+5, SCALE-10);
 	if(x < GRIDLEN-1 && grid[x+1][y] == grid[x][y])
 		fillSquare(sx+HSCALE+10, sy+10, SCALE-20);
@@ -48,12 +48,12 @@ void drawCarSquareOutline(const uint x, const uint y)
 		fillSquare(sx+10, sy+HSCALE+10, SCALE-20);
 }
 
-void drawCarOutline(const char letter)
+void drawCarOutline(const char letter, const bool selected)
 {
 	for(uint x = 0; x < GRIDLEN; x++){
 		for(uint y = 0; y < GRIDLEN; y++){
 			if(grid[x][y] == letter)
-				drawCarSquareOutline(x, y);
+				drawCarSquareOutline(x, y, selected);
 		}
 	}
 }

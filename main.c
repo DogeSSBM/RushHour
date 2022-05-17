@@ -23,8 +23,9 @@ int main(int argc, char const *argv[])
 			Ticks frameStart = getTicks();
 			clear();
 			drawGrid();
-			if(selected != '-')
-				drawCarOutline(selected);
+            for(uint i = 0; i < NUMCAR; i++)
+                if(carArr[i].enabled)
+                    drawCarOutline(carArr[i].letter, selected == carArr[i].letter);
 			drawCars();
 			draw();
 			events(frameStart + TPS, &selected);
